@@ -1,0 +1,32 @@
+{
+  "name": "forceDAO-yield-farming-strategy-on-polygon",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "script:YieldFarmingStrategy": "truffle exec ./scripts/polygon-mumbai/YieldFarmingStrategy.script.js --network polygon_mumbai",
+    "test": "truffle test ./test/test-local/* --network local",
+    "test:YieldFarmingStrategy": "truffle test ./test/test-local/YieldFarmingStrategy.test.js --network local",
+    "test:MasterChef": "truffle test ./test/test-local/polycat/MasterChef.test.js --network local",
+    "test:Sai": "truffle test ./test/test-local/truffle-mint-dai/sai.js --network local",
+    "test:Dai": "truffle test ./test/test-local/truffle-mint-dai/dai.js --network local",
+    "test:Usdc": "truffle test ./test/test-local/truffle-mint-dai/usdc.js --network local",
+    "test:Usdt": "truffle test ./test/test-local/truffle-mint-dai/usdt.js --network local",
+    "compile:local": "truffle compile --reset --network local",
+    "migrate:local": "truffle migrate --reset --network local",
+    "compile:polygon_mumbai": "truffle compile --reset --network polygon_mumbai",
+    "migrate:polygon_mumbai": "truffle migrate --reset --network polygon_mumbai"
+  },
+  "author": "masaun",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.1",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "@truffle/hdwallet-provider": "^1.3.0",
+    "dotenv": "^8.2.0",
+    "eth-block-tracker": "^4.4.3"
+  },
+  "devDependencies": {}
+}
